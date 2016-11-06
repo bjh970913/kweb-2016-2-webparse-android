@@ -15,12 +15,12 @@ public class Products {
         return TotalCount;
     }
 
-    public List<Product> getProduct() {
-        return Arrays.asList(Product);
-    }
-
     public void setTotalCount(int totalCount) {
         TotalCount = totalCount;
+    }
+
+    public List<Product> getProduct() {
+        return Arrays.asList(Product);
     }
 
     public void setProduct(Product[] product) {

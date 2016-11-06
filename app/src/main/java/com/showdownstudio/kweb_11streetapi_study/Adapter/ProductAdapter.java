@@ -19,7 +19,6 @@ import com.showdownstudio.kweb_11streetapi_study.Service.ImageLoader;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
@@ -37,20 +36,20 @@ public class ProductAdapter extends ArrayAdapter<Product> {
         this.context = context;
         productList = objects;
 
-        imageLoader= new ImageLoader(context);
+        imageLoader = new ImageLoader(context);
     }
 
     public void updateData(List<Product> objects) {
         productList.clear();
         productList.addAll(objects);
-        Log.i("Adapter", productList.size()+" of data sets updated");
+        Log.i("Adapter", productList.size() + " of data sets updated");
         this.notifyDataSetChanged();
     }
 
     @NonNull
     @Override
     public View getView(int position, View convertView, @NonNull ViewGroup parent) {
-        Log.i("Adapter", "create view for "+position);
+        Log.i("Adapter", "create view for " + position);
         ProductViewHolder holder;
 
         if (convertView == null) {
@@ -71,8 +70,8 @@ public class ProductAdapter extends ArrayAdapter<Product> {
 
         holder.imageView.setImageResource(R.mipmap.ic_launcher);
         holder.productName.setText(p.getProductName());
-        holder.productPrice.setText("가격: " + p.getProductPrice());
-        holder.productSeller.setText("판매자: " + p.getSeller());
+        holder.productPrice.setText(context.getString(R.string.ProductNameText, p.getProductPrice()));
+        holder.productSeller.setText(context.getString(R.string.SellerText, p.getSeller()));
 
         imageLoader.DisplayImage(p.getProductImage(), holder.imageView);
 
@@ -80,10 +79,10 @@ public class ProductAdapter extends ArrayAdapter<Product> {
     }
 
     private static class ProductViewHolder {
-         ImageView imageView;
-         TextView productName;
-         TextView productPrice;
-         TextView productSeller;
+        ImageView imageView;
+        TextView productName;
+        TextView productPrice;
+        TextView productSeller;
     }
 
     class ImageDownLoader extends AsyncTask<String, Void, Bitmap> {

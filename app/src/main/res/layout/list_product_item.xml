@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:orientation="horizontal" >
+              android:orientation="horizontal">
 
     <ImageView
             android:layout_width="48dp"
@@ -18,22 +18,25 @@
             android:paddingStart="3dp"
             android:paddingEnd="0dp"
             >
+
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:id="@+id/product_productName"
-                android:text="@string/ProductNameText" />
+                android:text="@string/ProductNameText"/>
+
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/product_price"
-                android:text="@string/PriceText" />
+                android:text="@string/PriceText"/>
+
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/product_seller"
-                android:text="@string/SellerText" />
+                android:text="@string/SellerText"/>
 
     </LinearLayout>
 
