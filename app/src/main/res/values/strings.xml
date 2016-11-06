@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">kweb_11streetAPI_study</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="ImageText">이미지</string>
+    <string name="ProductNameText">상품명</string>
+    <string name="PriceText">가격</string>
+    <string name="SellerText">판매자</string>
+    <string name="ListImageDescriptionText">상품 이미지</string>
+    <string name="EditTextHint">검색어</string>
+    <string name="SearchText">검색</string>
+</resources>
